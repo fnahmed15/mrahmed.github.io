@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="myScript.js"></script>
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+<div class="navlogo">
+</div>
+<div class="navlinks">
+<ul>
+<li><a href="#contact">CNAT IT</a></li>  
+  <li><a class="active" href="#about">A-Level</a></li>
+  <li><a href="GCSE.html">GCSE</a></li>
+  <li><a href="#news">KS3</a></li>
+<li><a href="index.html">Home</a></li>
+
+</ul>
+</div>
+</div>
+
+<div class="topnav" style="display: none;">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        👇 ☰
+        </a>
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="#news">KS3</a>
+          <a href="GCSE.html">GCSE</a>
+          <a href="#about">A-Level</a>
+	<a href="#contact">CNAT IT</a>
+        </div>
+</div>
+
+<h1> Home </h1>
+
+<p>
+Welcome to mrahmedcomputing.co.uk. The resources on this website can be used to support the teaching and learning of the KS3, KS4 and KS5 national Computer Science curriculum in the UK. Resources are updated frequently to match current specifications, and have been used since 2015 to support strong outcomes amongst Computer Science students. Both AQA and OCR Computer Science specifications are supported on this website.
+</p>
+<hr></hr>
+<h2>Current Date and Time:</h2>
+<p id="datetime"></p>
+<script>
+const now = new Date();
+
+// Format the date and time in a desired format
+const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', second: '2-digit' };
+const formattedDateTime = now.toLocaleString('en-GB', options); // Adjust locale as needed
+
+// Access the paragraph element with the id "datetime" and set its content
+const datetimeElement = document.getElementById("datetime");
+datetimeElement.textContent = formattedDateTime;
+</script>
+<hr></hr>
+
+<div class="row">
+<div class="image">
+<img id="myImage" src="_Robo_Logo_v3_4.png">
+</div>
+<div class="image">
+<img id="myImage2" src="_Robo_Logo_v3_4.png">
+</div>
+</div>
+
+<button onclick="document.getElementById('myImage').src='_Robo_Logo_v3_4.png'">Button 1</button>
+
+<button onclick="document.getElementById('myImage').src='_Website_logo_v6.png'">Button 2</button>
+<button onclick="document.getElementById('myImage2').src='_Robo_Logo_v3_4.png'">Button 3</button>
+
+<button onclick="document.getElementById('myImage2').src='_Website_logo_v6.png'">Button 4</button>
+
+
+<hr></hr>
+
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+
+
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>
