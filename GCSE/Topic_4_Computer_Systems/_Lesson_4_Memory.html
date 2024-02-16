@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 4. Memory</h1>
+<hr></hr>
+<div class = "row">
+<div class = "contentL">
+<h2>Lesson Objective</h2>
+<ol>
+<li>Understand the difference between RAM and ROM.</li>
+<li>Explain how memory is managed in a computer system.</li>
+<li>Identify appropriate RAM and ROM requirements for different systems.</li>
+</ol>
+<h2>Lesson Resources</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "contentR">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr>
+<h2>Lesson Notes </h2>
+<div class = "row">
+  <div class = "contentL">
+<h3>Random Access Memory - RAM</h3>
+<p>RAM is <mark>volatile</mark>, meaning that the information stored in it is erased when you restart or shut down your computer.</p>
+<p>It temporarily holds the files you are currently working on.</p>
+<p>When you switch between programs or pages, the data stored in RAM is instantly available.</p>
+<p>Slower than cache, faster than secondary storage</p>
+</div>
+  <div class = "contentR">
+    <img src="airam.png">
+  </div>
+</div>
+<hr>
+
+<div class = "row">
+  <div class = "contentL">
+<h3>Read Only Memory - ROM</h3>
+<p>ROM is <mark>non-volatile</mark>, which means the information is permanently stored on the chip. Turning off the computer does not impact ROM.</p>
+<p>ROM stores instructions that do not change, such as the initial boot-up portion of the software or firmware instructions for devices like printers.</p>
+</div>
+  <div class = "contentR">
+    <img src="airom.png">
+  </div>
+</div>
+<hr>
+<div class = "row">
+  <div class = "contentL">
+<h3>RAM and ROM Requirements</h3>
+<p>The amount of RAM and ROM a system needs depends on the purpose and type of system.</p>
+</div>
+  <div class = "contentR" style = "padding: 50px 10px 10px 0px">
+    <table style="height: 120px; width: 100%;">
+      <tr>
+        <th style="padding: 5px; background-color: black; color: white; width: calc(100% / 2);">Non-Embedded Systems</th>
+        <th style="padding: 5px; background-color: black; color: white; width: calc(100% / 2);">Embedded Systems</th>
+      </tr>
+      <tr>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">Non embedded systems usually have more RAM than ROM because they often need to write to memory.</td>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">Embedded systems usually have more ROM than RAM because they don't write much data to memory.</td>
+      </tr>
+      <tr>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">ROM is typically used for the BIOS, which doesn't need a lot of memory.</td>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">Don't usually have secondary storage, so ROM is used to store everything.</td>
+      </tr>
+      <tr>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">ROM and RAM is often stored away from CPU.</td>
+        <td style="padding: 5px; text-align: left; width: calc(100% / 2);">RAM and ROM are often stored on the same chip as the CPU to reduce physical space.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<hr>
+<h3>Memory Management</h3>
+<div class = "row">
+  <div class = "contentL">
+<h3>Cache</h3>
+<p>Cache is very fast RAM that is close to the CPU. Data that needs to be processed by the CPU is stored in the cache. The larger the cache size, the more data can be stored closer to the CPU.</p>
+</div>
+  <div class = "contentR" style = "padding: 50px 10px 10px 0px">
+    <img src="5-cpu-memory-management-coms-1_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "contentL">
+<h3>Virtual Memory</h3>
+<p>Temporary storage created on the Hard Disk when the RAM is full. Frees up space on the RAM to load new applications.</p>
+</div>
+  <div class = "contentR" style = "padding: 50px 10px 10px 0px">
+    <img src="6-virtual-memory_orig.png">
+  </div>
+</div>
+<hr>
+<div class = "row">
+  <div class = "contentL">
+<h3>Memory Hierarchy</h3>
+<p>The higher you go up the memory hierarchy you go the faster the data transfers become. However the capacity of the memory components gets smaller.</p>
+</div>
+  <div class = "contentR" style = "padding: 50px 10px 10px 0px">
+    <img src="4-cpu-memory-hierachy-1_orig.png">
+  </div>
+</div>
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

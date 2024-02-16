@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 8. Compression</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2>Lesson Objective</h2>
+<ol>
+<li>Understand the purpose of compression.</li>
+<li>Be able to explain the differences between lossy and lossless compression.</li>
+<li>Carry out Run Length Encoding and use Huffman Coding to compress text.</li>
+</ol>
+<h2>Lesson Objective</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<h3>Compression?</h3>
+<p>Compression is a technique used to reduce the size of digital files, making them more manageable for storage and transmission.</p>
+<h3>Lossy and Lossless Compression</h3>
+<p>There are 2 types of compression you need to be aware of.</p>
+<p>Lossy Compression: By using this type of compression, some data is permanently removed from the original file, resulting in a smaller file size. For example, by reducing the color depth of an image, shades of colors are averaged, leading to a smaller file. JPEG format uses lossy compression. <br>By using Lossy compression, some quality is sacrificed in favor of smaller file sizes.</p>
+<p>Lossless Compression: With lossless compression, files are reduced in size without any loss of data. It is ideal for files where data integrity is crucial, such as text, spreadsheets, and financial records. However, lossless compression typically doesn't achieve the same level of reduction as lossy methods. Various lossless standards exist, ensuring that files can be restored to their original quality.</p>
+<p><mark>In summary, lossy compression prioritizes smaller sizes at the cost of quality, whereas lossless compression maintains data integrity without sacrificing quality .</mark></p>
+<hr>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>Run Length Encoding (AQA Exam Only!!)</h3>
+<p>Run-length encoding (RLE) is a form of lossless data compression. RLE aims to reduce file size while preserving data integrity. It is commonly used for simple graphic images, such as icons, line drawings, and animations. In RLE, runs of data (sequences where the same value occurs consecutively) are stored as a single data value along with a count. Instead of representing each run individually, RLE condenses them into a more compact format.</p>
+<p>Imagine a screen with plain black text on a white background.<br>
+The scan line might look like this: <br><b>WWWWWWWWBWWWWWWWBBBWWWWWWWWWWWWWBBWWWWWW.</b><br>
+By applying RLE, it becomes: <b>8W1B7W3B13W2B6W.</b><br>
+This represents the original 67 characters in only 18.</p>
+<p style="font-size: 10px;">00000000000001000000000000111000000000000000000000000100000000000000</p>
+<p>130 11 120 31 240 11 140</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+  </div>
+</div>
+<hr>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>Huffman Coding (AQA Exam Only!!)</h3>
+<p>Lossless compression algorithm that is used to compress text. Watch the video on the right. It explains how text can be compressed using Huffman Coding.</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <iframe width="514" height="318" src="https://www.youtube.com/embed/QOgK0NSlWQ0" title="GCSE Computer Science - Huffman Coding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+<hr>
+<h3>Benefits of Compression</h3>
+<ul>
+  <li><b>Efficient Transmission:</b> Smaller files mean fewer data packets, resulting in faster transmission.</li>
+  <li><b>Enhanced Download Speeds:</b> Faster downloads (less data) for videos, audio, and images (including speech for VOIP systems).</li>
+  <li><b>Data Allowance Savings:</b> Reduced file sizes lead to lower data consumption. Beneficial for users with limited data plans.</li>
+  <li><b>Webpage Loading Speed:</b> Accelerates loading of webpages containing images.</li>
+  <li><b>Storage Optimization:</b> Less disk space required on servers and local devices.</li>
+  <li><b>Improved Streaming Experience:</b> Enables smoother streaming of music, games, and videos.</li>
+</ul>
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

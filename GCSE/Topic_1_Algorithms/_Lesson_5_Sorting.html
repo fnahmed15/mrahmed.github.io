@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 5. Sorting Algorithms</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2> Lesson Objective </h2>
+<ol>
+<li>Understand how to use the bubble sort algorithm.</li>
+<li>Understand how to use the insertion sort algorithm.</li>
+<li>Understand how to use the merge sort algorithms.</li>
+</ol>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<h3>Bubble Sort</h3>
+<div class = "row">
+<div class = "content">
+<p>Imagine you have a messy list of items.</p>
+<ol>
+<li><mark><b>Start at the beginning:</b></mark> Compare each item to the one next to it.</li>
+<li><mark><b>Swap if bigger:</b></mark> If an item is bigger than its neighbor, swap their positions in the list.</li>
+<li><mark><b>Move on, but leave the biggest behind:</b></mark> After comparing everything, the biggest item will be at the end.</li>
+<li><mark><b>Repeat, shrinking the list:</b></mark> Do the same comparisons again, but skip the end (already the biggest). This moves the next biggest item back one step.</li>
+<li><mark><b>Keep going until sorted:</b></mark> Continue comparing and swapping, moving towards the front of the list, until all items are in order from smallest to biggest (or biggest to smallest, depending on the sorting goal).</li>
+</ol>
+</div>
+<div class = "content">
+<p>This process is like bubbles of larger items constantly "floating" to the end as the list gets more ordered.</p>
+<iframe width="434" height="274" src="https://www.youtube.com/embed/lyZQPjUT5B4" title="Bubble-sort with Hungarian (&quot;Csángó&quot;) folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</div>
+<div class = "row">
+<div class = "content" style="padding:10px;">
+<p><b>Result of the first pass</b></p>
+<table style="height: 240px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">2</th>
+  </tr>
+  <tr>
+    <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+    <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+  </tr>
+</table>
+</div>
+  <div class = "content" style="padding:10px;">
+  <p><b>Result of the second pass</b></p>
+  <table style="height: 210px; border: 1px solid black; width: 100%;">
+    <tr>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4*</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: grey; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+    <tr>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="background-color: green; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+  </table>
+  </div>
+  </div>
+  <hr></hr>
+  <h3>Insertion Sort</h3>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+  <p>This algorithm sorts one data item at a time. One item is taken from the list, and placed in the correct position. This is repeated until there are no more unsorted items in the list. Example below:</p>
+  <table style="height: 240px; border: 1px solid black; width: 100%;">
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+      <th style="width: calc(100% / 8); border: 1px solid black;">2</th>
+    </tr>
+    <tr>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">2</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">3</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">4</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">5</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">8</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">9</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">11</th>
+      <th style="background-color: blue; color: white; width: calc(100% / 8); border: 1px solid black;">15</th>
+    </tr>
+  </table>  
+</div>
+  <div class = "content"  style = "padding: 10px 0px 10px 20px;">
+  <iframe width="434" height="274" src="https://www.youtube.com/embed/lCzQvQr8Utw" title="Insertion Sort Algorithm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  </div>
+  </div>
+<hr></hr>
+<h3>Merge Sort</h3>
+<div class = "row">
+<div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>Merge sort conquers a sorting problem by dividing the list to be sorted into smaller sub-lists, recursively conquering each sub-list by sorting it, and then combining the conquered sub-lists in a specific way to ensure the overall list is sorted.</p>
+<iframe width="434" height="274" src="https://www.youtube.com/embed/XaqR3G_NVoo" title="Merge-sort with Transylvanian-saxon (German) folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class = "content" style = "padding: 10px 0px 10px 20px;">
+<p><mark>1. Split the list into individual items</mark></p>
+<table style="height: 30px; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 16); border: 1px solid black;">39</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">17</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">24</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">43</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">12</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">48</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">31</th>
+    <th style="width: calc(100% / 16);"></th>
+  </tr>
+</table>
+<p><mark>2. Merge into pairs</mark></p>
+<table style="height: 30px; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">17</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">39</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">24</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">43</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">12</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">31</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">48</th>
+    <th style="width: calc(100% / 16);"></th>
+  </tr>
+</table>
+<p><mark>3. Merge into sublists</mark></p>
+<table style="height: 30px; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">17</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">24</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">39</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">43</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">12</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">31</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">48</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+  </tr>
+</table>
+<p><mark>4. Merge into final sorted list</mark></p>
+<table style="height: 30px; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">8</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">12</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">17</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">24</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">31</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">39</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">43</th>
+    <th style="width: calc(100% / 16); border: 1px solid black;">48</th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+    <th style="width: calc(100% / 16);"></th>
+  </tr>
+</table>
+<p><b>Note: </b>The split process has not been included in this example.</p>
+</div>
+</div>
+
+<hr></hr>
+<h3>Sort Comparisons</h3>
+<p>Choosing the right sorting algorithm <span style="background-color: lightblue;">depends on your data size and needs.</span> For small lists or partially sorted data, Insertion Sort shines, while Bubble Sort is simple but slow for larger datasets. Merge Sort reigns supreme for large datasets due to its speed, but it requires more memory. Think of them as tools: Insertion Sort for quick fixes, Bubble Sort for simple needs, and Merge Sort for heavy-duty tasks. Remember, the best algorithm depends on your specific situation!</p>
+<hr></hr>
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

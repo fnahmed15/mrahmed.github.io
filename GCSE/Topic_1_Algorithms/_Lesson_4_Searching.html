@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 4. Search Algorithms</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2> Lesson Objective </h2>
+<ol>
+<li>Understand the binary and linear search algorithms.</li>
+</ol>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2> Lesson Notes </h2>
+<h3> Why use Search Algorithms?</h3>
+<p>
+Imagine you have a giant phonebook with millions of names. Finding a specific number would take forever if you flipped through each page!
+</p>
+<p>
+That's where search algorithms come in. They're like clever tools that help you find things quickly in big piles of data. Instead of checking everything one by one, they use shortcuts and smart tricks to zoom in on exactly what you need.
+</p>
+<p>
+Think of it like searching for your friend in a crowded playground. You wouldn't look at every single person, right? You'd probably scan for their hair color, clothes, or maybe even hear their voice. Search algorithms do something similar, but for data like phone numbers or addresses. They make finding things fast and easy, even in massive amounts of information!
+</p>
+<hr></hr>
+<h3>Binary Search</h3>
+<p>This search algorithm keeps dividing a sorted list in half until the desired result is found.</p>
+<p>Here is a list of names:</p>
+<table style="height: 30px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Ali</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Brad</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Cora</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Fred</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Iman</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Lyra</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Nila</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Omar</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Pham</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Ruth</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Vlad</th>
+  </tr>
+</table>
+<p>We are searching for the name Nila. The list has 11 items. Examine the middle one first</p>
+<table style="height: 30px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Ali</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Brad</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Cora</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Fred</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Iman</th>
+    <th style="background-color: black; color: white; width: calc(100% / 11); border: 1px solid black;">Lyra</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Nila</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Omar</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Pham</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Ruth</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Vlad</th>
+  </tr>
+</table>
+<p>The middle item in the list is Lyra. Lyra comes before Nila alphabetically so we can discard all the names to the left of Lyra, including Lyra. Now we only have 5 names to search.</p>
+<table style="height: 30px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Ali</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Brad</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Cora</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Fred</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Iman</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Lyra</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Nila</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Omar</th>
+    <th style="background-color: black; color: white; width: calc(100% / 11); border: 1px solid black;">Pham</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Ruth</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Vlad</th>
+  </tr>
+</table>
+<p>Examine the middle name of the remaining list. The middle name is Pham. Nila comes before Pham so we can discard all the names from Pham to Vlad.</p>
+<table style="height: 30px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Ali</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Brad</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Cora</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Fred</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Iman</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Lyra</th>
+    <th style="background-color: black; color: white; width: calc(100% / 11); border: 1px solid black;">Nila</th>
+    <th style="width: calc(100% / 11); border: 1px solid black;">Omar</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Pham</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Ruth</th>
+    <th style="background-color: black; color: black; width: calc(100% / 11); border: 1px solid black;">Vlad</th>
+  </tr>
+</table>
+<p>Two names remain. The "middle" name is taken to be the first one (e.g. In a list of 4 names, the 2nd name would be the middle one). In the list of 2, examine thie 1sr item (Nila). Nila has now been found.</p>
+<hr></hr>
+<h3>Linear Search</h3>
+<p>Imagine you have a messy pile of clothes and you need to find a specific shirt. You wouldn't be able to quickly narrow it down by diving straight to the middle, right? That's like binary search, which needs things to be neatly ordered.</p>
+<p>Instead, you'd likely pick up each item one by one, checking if it's the shirt you're looking for. That's similar to a linear search, which goes through things sequentially until it finds what you need.</p>
+<p>So, when things are mixed up, a linear search is like sifting through, while a binary search is like aiming straight for the target when things are lined up perfectly.</p>
+<table style="height: 30px; border: 1px solid black; width: 100%;">
+  <tr>
+    <th style="width: calc(100% / 9); border: 1px solid black;">146</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">23</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">54</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">12</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">89</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">223</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">9843</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">2</th>
+    <th style="width: calc(100% / 9); border: 1px solid black;">389</th>
+  </tr>
+</table>
+<p>If the list to be searched is not sorted, it is not possible to do a binary search. A linear search may be carried out instead. Items are examined in the sequence. In the list above, to find the number 12, we would have to examine 146, 23, 54 and then 12.</p>
+<hr></hr>
+<h3>Search Comparisons</h3>
+<p>Linear search does <mark>not need a sorted list</mark>. <span style="background-color: lightblue;">Binary search more efficient than linear</span> - faster on larger lists. <mark>Binary search can not be done on unsorted lists</mark>. <mark>Linear search not good for large lists</mark></p>
+<hr></hr>
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

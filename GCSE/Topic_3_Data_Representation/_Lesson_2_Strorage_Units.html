@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 2. Storage Units</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2>Lesson Objective</h2>
+<ol>
+<li>Understand how bit patterns can be used to represent different types of data.</li>
+<li>Define the terms bit, nibble, byte, kilobyte, megabyte, gigabyte and terabyte using standard prefixes.</li>
+<li>Convers between different storage units.</li>
+</ol>
+<h2>Lesson Resources</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<h3>Bit Patterns</h3>
+<p>Bit patterns play a crucial role in representing various types of data. Whether it's text, images, sound, or integers, everything is ultimately translated into binary form-combinations of 1s and 0s. Let's explore how different data types are converted into these bit patterns:</p>
+<p><b><mark>Text (Characters):</mark></b></p>
+<p>When you press a key on your keyboard, it needs to be transformed into a binary number so that the computer can process it and display the corresponding character on the screen.</p>
+<p>The <b>ASCII code</b> (American Standard Code for Information Interchange) assigns a unique binary number to each character. For instance:</p>
+<ul>
+<li>The letter 'a' corresponds to the binary number 0110 0001 (decimal 97).</li>
+<li>The letter 'b' corresponds to 0110 0010 (decimal 98).</li>
+<li>The letter 'c' corresponds to 0110 0011 (decimal 99).</li>
+</ul>
+<p>ASCII code covers special characters, punctuation, return keys, control characters, as well as uppercase and lowercase letters. It can represent 128 characters, which suffices for most English words but falls short for other languages.</p>
+<p><b><mark>Images:</mark></b></p>
+<p>Images are typically represented as <b>bitmap graphics</b>. Each image consists of tiny squares called <b>pixels</b>.</p>
+<p>The color of each pixel is encoded using binary values. For example:</p>
+<ul>
+<li>Black pixel: 00000000 (no color)</li>
+<li>White pixel: 11111111 (full color)</li>
+</ul>
+<p>Additionally, the <b>color depth</b> determines the range of colors an image can display. Higher color depth allows more vibrant and detailed images.</p>
+<p><b><mark>Sound:</mark></b></p>
+<p>Sound is captured through <b>sampling</b>. Analog sound waves are converted into digital samples.</p>
+<p>The <b>bit depth</b> (number of bits per sample) affects sound quality. More bits provide greater accuracy.</p>
+<p>Common audio formats (like MP3) use bit patterns to represent sound data.</p>
+<h3>Here some practical examples of file sizes:</h3>
+<ul>
+<li><b><mark>One Character File:</mark></b> A single character (e.g., 'a') occupies 1 byte.</li>
+<li><b><mark>Full Page of Text:</mark></b> Approximately 30 kilobytes (kB). That's the size of a typical text document.</li>
+<li><b><mark>DVD:</mark></b> Approximately 4.5 gigabytes (GB). DVDs store movies, software, or large data files</li>
+<li><b><mark>Hard Disk:</mark></b> A whopping 1 terabyte (TB). Modern hard drives offer massive storage capacity for files, applications, and more.</li>
+<li><b><mark>Small Digital Color Photograph:</mark></b> Roughly 3 megabytes (MB). This size accommodates a decent-quality photo.</li>
+<li><b><mark>Music CD:</mark></b> About 600 MB. A standard audio CD holds around 74 minutes of music.</li>
+</ul>
+<hr>
+<h3>Units of Measurement</h3>
+<p>In the metric system, we have straightforward conversions: 1 kilometer (km) equals 1000 meters (m), and 1 kilogram (kg) equals 1000 grams (g). These powers of 10 make sense and are easy to remember.</p>
+<p>However, when it comes to digital storage, things get interesting. Computers use binary (base 2) for everything. So, when they measure storage, they work in powers of 2. A kilobyte (kB) is commonly understood to be 1000 bytes. However, there's a historical twist.</p>
+<p>In binary terms, a kilobyte is actually 1024 bytes (2^10). This discrepancy arises because 1024 is the nearest power of 2 that's close to 1000. To address this, modern terminology introduces the concept of a kibibyte (KiB). A kibibyte is precisely 1024 bytes, matching the binary reality. Meanwhile, a kilobyte (kB) remains 1000 bytes (as per the metric system).</p>
+<p>Binary patterns can be used to represent any data, be it text, sound, images or video. The number of possible bit combinations or patterns available increase with when the numbers of bits increase.</p>
+
+
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>Unit Conversion Table</h3>
+<p>Use this table to help you convert units. Its not a great table, im working on it...</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <table style="height: 240px; width: 100%;">
+      <tr>
+        <th style="background-color: black; color: white; width: calc(100% / 3);">Div</th>
+        <th style="background-color: black; color: white; width: calc(100% / 3);">Unit</th>
+        <th style="background-color: black; color: white; width: calc(100% / 3);">Mult</th>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">0</td>
+        <td style="width: calc(100% / 3);">Bit</td>
+        <td style="width: calc(100% / 3);">0</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">0</td>
+        <td style="width: calc(100% / 3);">byte</td>
+        <td style="width: calc(100% / 3);">5</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">3</td>
+        <td style="width: calc(100% / 3);">kilobyte</td>
+        <td style="width: calc(100% / 3);">2</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">0</td>
+        <td style="width: calc(100% / 3);">megabytes</td>
+        <td style="width: calc(100% / 3);">0</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">0</td>
+        <td style="width: calc(100% / 3);">gigabytes</td>
+        <td style="width: calc(100% / 3);">5</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">3</td>
+        <td style="width: calc(100% / 3);">terabyte</td>
+        <td style="width: calc(100% / 3);">2</td>
+      </tr>
+      <tr>
+        <td style="width: calc(100% / 3);">3</td>
+        <td style="width: calc(100% / 3);">petabyte</td>
+        <td style="width: calc(100% / 3);">2</td>
+      </tr>
+    </table> 
+  </div>
+</div>
+<hr>
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

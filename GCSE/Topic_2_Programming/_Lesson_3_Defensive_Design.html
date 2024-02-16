@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 3. Robust and Secure Programming</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2> Lesson Objective </h2>
+<ol>
+<li>Understand the purpose of testing and validation.</li>
+<li>Be able to state some features of IDEs.</li>
+<li>Identify good coding practice.</li>
+</ol>
+<h2>Lesson Resources</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<h3>Testing?</h3>
+<p>Testing aims to find and fix errors and ensure a program's quality. You should make a test plan with various tests and test data to check the program. Test data should include different inputs to show the program's strengths and weaknesses. Test data has three categories: Normal, Boundary and Erroneous.</p>
+<div class = "row">
+  <div class = "content">
+<h3>Normal Test Data</h3>
+<p>Sensible, valid data that the program should accept and be able to process. For example, if a program asks for a number from 1 to 10, normal data could be 5.</p>
+  </div>
+  <div class = "content">
+    
+  </div>
+</div>
+<div class = "row">
+  <div class = "content">
+<h3>Boundary Test Data</h3>
+<p>Valid data that falls at the boundary of any possible ranges, sometimes known as extreme data. For example, if a program asks for a number from 1 to 10, boundary data could be 1 or 10.</p>
+  </div>
+  <div class = "content">
+    
+  </div>
+</div>
+<div class = "row">
+  <div class = "content">
+<h3>Erroneous Test Data</h3>
+<p>Invalid data that the program cannot process and should not accept. For example, if a program asks for a number from 1 to 10, erroneous data could be -5, 20, or "hello".</p>
+  </div>
+  <div class = "content">
+  </div>
+</div>
+<hr></hr>
+<h3>Validation</h3>
+<p>Validation is used to make sure that data is entered in a correct way. This ensures that the data is relevant and useful for its intended purpose.</p>
+<p>Different types of validation checks can be used to validate data:</p>
+<ol>
+<li><span style="background-color: rgb(199, 109, 244);">Range check:</span> The input should be within a certain range. For example, you can enter your age from 1 to 120. Or, you can choose a number of items from 0 to the available stock.</li>
+<li><span style="background-color: rgb(199, 109, 244);">Length check:</span> The input should have a specific number of characters. For example, you should enter a valid phone number with 10 digits. Or, you should use a username with at least 6 characters.</li>
+<li><span style="background-color: rgb(199, 109, 244);">Presence check:</span> The input should not be blank, like something has to be entered. For example, you have to type your password to log in. Or, you have to fill in your name on a survey.</li>
+<li><span style="background-color: rgb(199, 109, 244);">Format check:</span> The input should follow a certain format. For example, you might want the email address in this format: name@domain.com. Or, you might want the time in this format: hh:mm:ss.</li>
+<li><span style="background-color: rgb(199, 109, 244);">Type check:</span> The input should be a specific data type, such as a Boolean.</li>
+</ol>
+<p>Validation does not guarantee the accuracy of the data. It might be in the right format, but still incorrect. For instance, typing an incorrect birth date.</p>
+<p>Below is an example of an algorithm that validates an input.</p>
+<ol>
+<li>Password = input</li>
+<li>WHILE LENGTH(Password) < 8 OR LENGTH (Password) > 15</li>
+<li style="padding-left: 30px;">OUTPUT "Sorry this is a weak password, try again...</li>
+<li style="padding-left: 30px;">Password = input</li>
+<li>ENDWHILE</li>
+<li>OUTPUT "Your password is strong"</li>
+</ol>
+<hr></hr>
+<h3>Authentication</h3>
+<p>Authentication is the process of confirming your identity. Below are some examples of authentication methods:</p>
+<ol>
+<li>Username and Password</li>
+<li>Pin</li>
+<li>Pattern Lock</li>
+<li>Secret answer to a question</li>
+<li>Swipe card</li>
+<li>Biometrics</li>
+</ol>
+<hr></hr>
+<h3>IDE (Integrated Development Environment)</h3>
+<p>An IDE is a software tool that helps you make other software. It gives you a space to type, change, and store code in a convenient way. IDEs have various features that assist you in making and modifying programs. Here are some examples of features:</p>
+<ol>
+<li>Auto-Completion - This saves you time by suggesting or completing the function name and its parameters as you type. </li>
+<li>Bracket Pairing - This helps you avoid missing brackets by showing coloured sections where you need to close them.</li>
+<li>Syntax Highlighting - This shows you where you have made syntax errors by highlighting the code differently. </li>
+<li>Breakpoints - These let you pause the program at certain points to check what is going on and find bugs. </li>
+<li>Libraries - These give you access to extra functions that are not built into the programming language. You can use these functions by importing them at the beginning of your code. For example, in Python you can use the Turtle Graphics library to draw simple shapes and graphics. </li>
+<li>Debugger - This is a feature that helps you find and fix errors in your code. It tells you what kind of error it is and where it is located.</li>
+</ol>
+<hr></hr>
+<h3>Debugging</h3>
+<p>Debugging is the process of finding and fixing any problems or bugs in the program, usually by testing it in a methodical way. A debugger program is a common feature in IDEs that helps with debugging.</p>
+<hr></hr>
+<h3>Good Coding Practice</h3> 
+<div class = "row">
+  <div class = "content"  style = "padding: 10px 10px 10px 0px;">
+<h3>Meaningful Names</h3> 
+<p>You should use meaningful variable and subroutine names in your program. This helps other programmers to understand what is going on. It can also help you remember how your code is working.</p>
+<p><i><b>Example:</b> No meaningful names</i></p>
+<ol>
+<li>x = 60</li>
+<li>y = input</li>
+<li>z = (y/x) * 100</li>
+<li>OUTPUT z + "%"</li>
+</ol>
+<p><i><b>Example:</b> With meaningful names</i></p>
+<ol>
+<li>total = 60</li>
+<li>score = input</li>
+<li>percentage = (score/total) * 100</li>
+<li>OUTPUT percentage + "%"</li>
+</ol>
+</div>
+<div class = "content" style = "padding: 10px 0px 10px 10px;">
+<h3>Comments</h3>
+<p>Comments are also good practice as they can again explain sections of code to other programmers and also help you remember things.</p>
+<p><i><b>Example:</b> No comments</i></p>
+<ol>
+<li>x = 60</li>
+<li>y = input</li>
+<li>z = (y/x) * 100</li>
+<li>OUTPUT z + "%"</li>
+</ol>
+<p><i><b>Example:</b> With comments</i></p>
+<ol>
+<li>x = 60 #x is the total</li>
+<li>y = input #y is the score</li>
+<li>z = (y/x) * 100 #z is the percentage</li>
+<li>OUTPUT z + "%"</li>
+</ol>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

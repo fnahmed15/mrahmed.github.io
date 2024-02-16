@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 1. Programming Languages</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2> Lesson Objective </h2>
+<ol>
+<li>Understand and recognise the differences between high and low level programming languages.</li>
+<li>Explain how assemblers, compilers, assemblers work.</li>
+<li>Compare the diffierences of assemblers, compilers, assemblers.</li>
+</ol>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes</h2>
+<h3>Programming Languages</h3>
+<p>
+Programming languages have evolved over time, and we can group them into four main categories based on how close they are to the computer's inner workings.
+</p>
+<p>
+The first two generations, like machine code and assembly language, are like speaking directly to the machine in its own language, which is complex and hard for humans to understand.
+</p>
+<p>
+The third and fourth generations, like C++ and Python, are more like natural languages, making them easier for people to write and understand. They act as an intermediary, translating our instructions into machine code the computer can execute.
+</p>
+<hr></hr>
+<h3>Low Level Languages</h3>
+<p>Think of your computer as a machine that only speaks a specific language of ones and zeros (machine code). Low-level languages are like translators that let you communicate directly with the machine in its native tongue. Unlike "higher-level" languages like Python or Java, which are more human-friendly, low-level languages require you to understand the specific instructions, or commands, that the processor can understand. This gives you fine-grained control but also makes them more complex and less portable (they won't work on every computer). Essentially, low-level languages bridge the gap between your ideas and the machine's capabilities, but at the cost of being closer to the hardware and less intuitive for humans.</p>
+
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+    <h3>Machine Code (Gen 1)</h3>
+    <p>Machine code, also known as machine language, is the fundamental language of computers. It's a set of instructions written in binary (0s and 1s) that the processor (CPU) directly understands and executes. It's the lowest level of programming, meaning it's the closest you can get to speaking directly to the computer's hardware.</p>
+     <p>Here's a breakdown of its key features:
+      <mark>Binary language:</mark> Made up of 0s and 1s, representing the on and off states of electrical circuits within the CPU.
+      <mark>Directly executed by CPU:</mark> No need for translation, the CPU understands machine code instructions immediately.
+      <mark>Specific to processor architecture:</mark> Each CPU has its own unique instruction set, making machine code specific to that hardware.
+      <mark>Low-level and complex:</mark> Difficult for humans to read and write due to its binary nature and absence of human-readable syntax.
+      <mark>Fast and efficient:</mark> Since it's directly executed by the CPU, it can be very fast and efficient, especially for tasks requiring precise hardware control.</p>
+    <p>You should note ALL the other generations of programming languages will convert your program into this machine code. </p>
+  <p>Example: Machine Code</p>
+<p>00000000 00000001 00000001 00000000 00000001 00000001 00000001 00000001 00000000 00000000 00000000 00000001 00000001 00000000 00000000 00000001 00000001 00000001 00000000 00000000 00000001 00000001 00000001 00000001 00000001 00000001 00000000 00000001 00000000 00000001</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <h3>Assembly Code (Gen 2)</h3>
+    <p>Assembly code is a low-level programming language that acts as a bridge between human-readable code and the machine code understood by computers. Think of it like a translator allowing you to communicate directly with the computer's hardware, albeit in a way more intuitive than its native binary language.</p>
+  <p>Here are some key features of assembly code:
+    <mark>Closer to machine code:</mark> Unlike higher-level languages like Python or Java, assembly instructions closely resemble the actual instructions the processor can execute. This gives you fine-grained control over hardware but also makes it less portable (won't work on all systems) and more complex to use.
+    <mark> Uses mnemonics:</mark> Instead of writing binary code directly, assembly uses human-readable symbols called mnemonics. For example, "MOV" might represent the instruction to move data from one location to another. These mnemonics are still closer to machine code than natural language but easier to understand.
+    <mark>Requires understanding of instruction sets:</mark> Each processor architecture has its own unique set of instructions, so the specific assembly language you use will depend on the hardware you're targeting.
+    <mark> Powerful but often less popular:</mark> While offering precise hardware control, assembly can be tedious and error-prone, making it less frequently used than higher-level languages in modern development. It's often reserved for tasks requiring maximum performance or direct hardware interaction, like device drivers or embedded systems programming.</p>
+  <p>Example: Assembly Code</p>
+  <p style="line-height: 0.5;">LDR R1, 301 ;load contents of 301 into R1</p>
+  <p style="line-height: 0.5;">LDR R2, 302 ;load contents of 302 into R2</p>
+  <p style="line-height: 0.5;">ADD R1, R1, R2 ;add R2 to R1, store in R1</p>
+  <p style="line-height: 0.5;">LDR R3, 303 ;load contents of 303 into R3</p>
+  <p style="line-height: 0.5;">ADD R1, R1, R3 ;Add R3 to R1, store in R1</p>
+  <p style="line-height: 0.5;">STR R1, 304 ;store result in 304</p>
+  </div>
+</div>
+<p>Extra Note: Many machine code and assembly instructions contain two parts:</p>
+<ol>
+  <li>the opcode - this is the actual instruction</li>
+  <li>the operand - this is a value that the instruction uses or manipulates</li>
+</ol>
+<p>Both opcode and operand values are ultimately represented in binary.</p>
+<hr></hr>
+<h3>High Level Languages</h3>
+<p>High level languages are not dependent upon the computer architecture and require a translator or compiler to convert them to machine code.</p>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+    <h3>Python, VB, C#, etc (Gen 3)</h3>
+    <p>Writing directly in machine code is incredibly difficult and not feasible for larger programs. Assembly language, while a step up, still requires memorizing specific codes and instructions, making it complex and error-prone for intricate projects.</p>
+  <p>Enter third-generation languages! These languages, like English or French, use familiar words and structures, allowing you to focus on what you want your program to do instead of how it does it. You can group and organize your code into routines and subroutines, making it easier to understand and maintain.</p>
+<p>Example: Java</p>
+<p style="line-height: 0.5;">String name = "Ahmed";</p> 
+<p style="line-height: 0.5;">system.out.println(name);</p>
+<p style="line-height: 0.5;">int n1 = 4;</p> 
+<p style="line-height: 0.5;">int n2 = 5;</p>
+<p style="line-height: 0.5;">system.out.println(n1 + n2);</p>
+<p>Java, php, C, C+, C#, Pascal, Cobol, Visual Basic, etc are also examples of third generation programming languages.</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <h3>SQL, Prolog, MySQL (Gen 4)</h3>
+    <p>Fourth-generation languages take a different approach than traditional "how-to" programming. Instead of meticulously telling the computer every step to take (procedural), these languages focus on "what needs to be done" (declarative). Think of it like giving instructions instead of writing the entire recipe!</p>
+  <p>This makes them especially useful for tasks like accessing databases, where you specify what information you need rather than the intricate steps to retrieve it.</p>
+  <p>And the best part? They're designed to be understood easily! With syntax mirroring everyday language and forgiving error handling, even people without extensive programming experience can feel comfortable using them.</p>
+  <p>Example: SQL</p>
+  <p style="line-height: 0.5;">FROM Customers SELECT firstnames</p>
+  <p style="line-height: 0.5;">WHERE age > 24</p>
+  <p>Prolog, MySQL are also examples of forth generation programming languages.</p>
+  </div>
+</div>
+<hr></hr>
+<h3>Programming Language Translators</h3>
+<p><mark>Computers can only run machine code.</mark> When you write a program in a second, third or fourth generation language then the program must be translated into machine language with either a Assembler or Compiler or Interpreter.</p>
+<img src="translators2_orig.png" alt="Image of tranlator process">
+
+<h3>Assembler</h3>
+<p>An assembler is a program that translates an assembly language program into machine code.</p>
+<h3>Compiler</h3>
+<p>A compiler takes a the source code from a high level language and translates it into machine code. The resulting code will run much faster as it requires no translation at run time. Compilers turn high level code into one workable executable (exe) files.</p>
+<h3>Interpreter</h3>
+<p>An interpreter analyses and executes each line of code within a high level programming language. It does not look at any other part of the code except the line it is running. Execution is slower because the program is analysed line by line at runtime. The advantage is that the code runs immediately without having to wait for the code to be compiled. It is also clear to see which part of the code is being executed.</p>
+<br>
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

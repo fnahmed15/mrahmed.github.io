@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 7. Sound Representation</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2>Lesson Objective</h2>
+<ol>
+<li>Understand how analogue sound is converted into digital sound.</li>
+<li>Describe how sample rate and resolution affects the quality and the file size.</li>
+<li>Calculate the file size of an audio file.</li>
+</ol>
+<h2>Lesson Objective</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<h3>Analogue to Digital</h3>
+<p>Microphone measures changes in air pressure. Microphone translates air pressure into electrical voltage (binary). Analogue to digital converter digitises the electrical voltage to bytes of information. Computer displays the digitised sound for manipulation.</p>
+<hr>
+<h3>Sound Resolution</h3>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>Resolution measures the amplitude of a sound wave. The resolution is measured on the Y axis of the sound wave graph on the right.</p>
+<p>The green line on the graph represents the digital form of the analogue sound.</p>
+<p>The sound wave on the right is digitised into a sound file that records 1 sample a second, with a 3 bit sound resolution (you need 3 bits to represent all the number of the Y axis).</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph1_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>When you increase the resolution, you can represent the amplitude of the sound wave more accurately. This is demonstrated in the graph to the right.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph2_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>The more you increase the bit depth/resolution, the more accurately you will be able to recreate the analogue sound. However, increasing the resolution on its own will not be enough to have an accurate digital representation of the analogue sound wave represented in the graph.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph3_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>Sample Rate</h3>
+<p><b>Hertz (Hz)</b> - How many samples are taken every second</p>
+<ul>
+  <li>1000 Hz = 1 kHz</li>
+  <li>1000 kHz = 1 mHz</li>
+  <li>1000 mHz = 1 gHz</li>
+</ul>
+<p>The sample rate refers to the amount of measurements that are taken every second. They are represented on the X axis of the sound graphs. The sound graph on the right represents audio that records 2 samples a second. The length of the audio is also measured on the X axis (in seconds).</p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph4_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>The digital representation of the audio gets more accurate when the sample rate is increased. The graph on the right shows a recording of 4 samples a second.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph5_orig.png">
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>As you increase both the resolution and the sample rate. The digital representation becomes more accurate and the quality of the digital audio increases.</p>
+<p><b>This will also increase the file size of the audio.</b></p>  
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph6_orig.png">
+  </div>
+</div>
+<hr>
+<h3>Representing Sound as Binary</h3>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>Bit depth is the number of bits available for each sample. It is dependent on the resolution of the audio which is recorded on the Y axis on the sound graphs. If the resolution Y axis goes up to 24, then the bit depth will 5 bits because you need 5 bits of binary to represent the number 24. Every time a sample is recorded, the resolution is converted in to binary.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <p> In the example, the resolution will be converted in to a 5 bit binary number.</p>
+    <table style="height: 90px; width: 100%;">
+      <tr>
+        <td style="background-color: black; color: white; width: 20%;">Time Sample</td>
+        <td style="width: calc(80% / 6);">1</td>
+        <td style="width: calc(80% / 6);">2</td>
+        <td style="width: calc(80% / 6);">3</td>
+        <td style="width: calc(80% / 6);">4</td>
+        <td style="width: calc(80% / 6);">5</td>
+        <td style="width: calc(80% / 6);">6</td>
+      </tr>
+      <tr>
+        <td style="background-color: black; color: white; width: 20%;">Resolution</td>
+        <td style="width: calc(80% / 6);">10</td>
+        <td style="width: calc(80% / 6);">17</td>
+        <td style="width: calc(80% / 6);">5</td>
+        <td style="width: calc(80% / 6);">20</td>
+        <td style="width: calc(80% / 6);">7</td>
+        <td style="width: calc(80% / 6);">31</td>
+      </tr>
+      <tr>
+        <td style="background-color: black; color: white; width: 20%;">Binary</td>
+        <td style="width: calc(80% / 6);">01001</td>
+        <td style="width: calc(80% / 6);">10001</td>
+        <td style="width: calc(80% / 6);">00101</td>
+        <td style="width: calc(80% / 6);">10100</td>
+        <td style="width: calc(80% / 6);">00111</td>
+        <td style="width: calc(80% / 6);">11111</td>
+      </tr>
+    </table> 
+  </div>
+</div>
+<hr>
+<h3>File Size</h3>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<p>File size (bits) = sample rate x resolution x seconds
+<br>1 samples per second x 5 bit resolution x 8 seconds = 40 bits
+<br>40 bits / 8 = 5 bytes
+</p>
+<h3>Factors that affect the quality and file size</h3>
+<p>Increasing resolution and sample rate means the quality will improve. It also means the file size will increase.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <img src="soundgraph7_orig.png">
+  </div>
+</div>
+<p></p>
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>

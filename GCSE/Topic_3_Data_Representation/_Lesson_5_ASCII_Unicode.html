@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../style.css">
+<title>mrahmedcomputing</title>
+<link rel="icon" type="image/x-icon" href="../../_Robo_Logo_v3_4.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script src="../../myScript.js"></script>
+<!--<script src="myOtherScript.js"></script>*/-->
+<style>
+@media screen and (max-width: 800px) {
+  table{
+font-size: 8px;
+height: 510px !important;
+}
+th, td{
+padding:0px 5px 0px 5px;
+  }
+}
+th, td{
+    width: calc(100% / 12);
+  }
+</style>
+</head>
+<body>
+<div class ="row">
+<div class="leftside">
+1
+</div>
+<div class="main">
+<div class="header">
+<h1>mrahmedcomputing</h1>
+<p>KS3, GCSE, A-Level Computing Resources</p>
+</div>
+
+
+<div class="nav">
+  <div class="navlogo">
+  <p style="margin:0; padding:0; margin-left: 20px; color:white">Menu 👉</p>
+  </div>
+  <div class="navlinks">
+  <ul>
+  <li><a href="../../Programming/Programming.html">Programming</a></li>  
+    <li><a href="../../A-Level/A-Level.html">A-Level</a></li>
+    <li><a class="active" href="../GCSE.html">GCSE</a></li>
+    <li><a href="../../KS3/KS3.html">KS3</a></li>
+  <li><a href="../../index.html">Home</a></li>
+  
+  </ul>
+  </div>
+  </div>
+  
+  <div class="topnav" style="display: none;">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          👇 ☰
+          </a>
+          <div id="myLinks">
+            <a href="../../index.html">Home</a>
+            <a href="../../KS3/KS3.html">KS3</a>
+            <a href="../GCSE.html">GCSE</a>
+            <a href="../../A-Level/A-Level.html">A-Level</a>
+    <a href="../../Programming/Programming.html">programming</a>
+          </div>
+  </div>
+
+<h1> Lesson 5. ASCII and Unicode</h1>
+<hr></hr>
+<div class = "row">
+<div class = "content">
+<h2>Lesson Objective</h2>
+<ol>
+<li>Understand the purpose of ASCII and Unicode.</li>
+<li>Be able to convert text into binary.</li>
+<li>Be able to explain the term "Character Set".</li>
+<li>Be able to calculate file size of Text.</li>
+</ol>
+<h2>Lesson Resources</h2>
+<p>Lesson Quiz</p>
+</div>
+<div class = "content">
+<h2> Lesson Presentation </h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQABsv0yyHUkc6wQLxUgT_SxabaA-2Lmv8LorYroO6yD8o4XcGnIK1cAH7QKfzmBkrj6yF9U8eirT52/embed?start=false&loop=false&delayms=600000&amp;rm=minimal" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+<p>Select the presentation, the press "f11" to enter full screen mode</p>
+</div>
+</div>
+
+<hr></hr>
+<h2>Lesson Notes </h2>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>7 bit ASCII Table</h3>
+<p>ASCII (pronounced "az-kee" or "ass-key" if American) stands for the American Standard Code for Information Interchange. It serves as a character encoding standard used for electronic communication between computers, telecommunications equipment, and other devices . Here are some key points about ASCII:</p>  
+<ol>
+  <li><b>Character Encoding:</b> ASCII assigns standard numeric values to letters, numerals, punctuation marks, and other characters commonly used in computers. Each character is represented by a unique numerical code.</li>
+  <li><b>128 Code Points:</b> Initially, ASCII had only 128 code points, of which only 95 are printable characters. These include digits (0 to 9), lowercase letters (a to z), uppercase letters (A to Z), and punctuation symbols. The remaining 33 codes were non-printing control characters, such as carriage return and line feed.</li>
+  <li><b>Binary Representation:</b> ASCII encodes characters into seven-bit integers. For instance, the lowercase letter "i" is represented by binary 1101001 (hexadecimal 69 or decimal 105).</li>
+  <li><b>Evolution and Scope:</b> While modern computer systems have transitioned to Unicode (which has millions of code points), the first 128 Unicode code points align with the original ASCII set. ASCII remains a fundamental foundation for character encoding in computing.</li>
+</ol>
+<p>Despite being an American standard, ASCII does not include a code point for the cent symbol (¢) or support English terms with diacritical marks (such as résumé and jalapeño) or proper nouns with diacritical marks (such as Beyoncé). </p>
+<p><mark><b>NOTE: Binary values in the table are incorrect. Will fix it later when I have some time.</b></mark></p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+<table style="height: 990px; width: 100%;">
+    <tr>
+      <th style="background-color: #58c7ff; color: black;">Binary</th>
+      <th style="background-color: #58c7ff; color: black;">Dec</th>
+      <th style="background-color: #58c7ff; color: black;">Hex</th>
+      <th style="background-color: #58c7ff; color: black;">Char</th>
+      <th style="background-color: #58c7ff; color: black;">Binary</th>
+      <th style="background-color: #58c7ff; color: black;">Dec</th>
+      <th style="background-color: #58c7ff; color: black;">Hex</th>
+      <th style="background-color: #58c7ff; color: black;">Char</th>
+      <th style="background-color: #58c7ff; color: black;">Binary</th>
+      <th style="background-color: #58c7ff; color: black;">Dec</th>
+      <th style="background-color: #58c7ff; color: black;">Hex</th>
+      <th style="background-color: #58c7ff; color: black;">Char</th>
+    </tr>
+    <tr>
+      <td>0100000</td>
+      <td>32</td>
+      <td>20</td>
+      <td> </td>
+      <td>1000001</td>
+      <td>64</td>
+      <td>40</td>
+      <td>@</td>
+      <td>1100001</td>
+      <td>96</td>
+      <td>60</td>
+      <td>`</td>
+    </tr>
+    <tr>
+      <td>0100001</td>
+      <td>33</td>
+      <td>21</td>
+      <td>!</td>
+      <td>1000010</td>
+      <td>65</td>
+      <td>41</td>
+      <td>A</td>
+      <td>1100010</td>
+      <td>97</td>
+      <td>61</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <td>0100010</td>
+      <td>34</td>
+      <td>22</td>
+      <td>"</td>
+      <td>1000011</td>
+      <td>66</td>
+      <td>42</td>
+      <td>B</td>
+      <td>1100011</td>
+      <td>98</td>
+      <td>62</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <td>0100011</td>
+      <td>35</td>
+      <td>23</td>
+      <td>#</td>
+      <td>1000100</td>
+      <td>67</td>
+      <td>43</td>
+      <td>C</td>
+      <td>1100100</td>
+      <td>99</td>
+      <td>63</td>
+      <td>c</td>
+    </tr>
+    <tr>
+      <td>0100100</td>
+      <td>36</td>
+      <td>24</td>
+      <td>$</td>
+      <td>1000101</td>
+      <td>68</td>
+      <td>44</td>
+      <td>D</td>
+      <td>1100101</td>
+      <td>100</td>
+      <td>64</td>
+      <td>d</td>
+    </tr>
+    <tr>
+      <td>0100101</td>
+      <td>37</td>
+      <td>25</td>
+      <td>%</td>
+      <td>1000110</td>
+      <td>69</td>
+      <td>45</td>
+      <td>E</td>
+      <td>1100110</td>
+      <td>101</td>
+      <td>65</td>
+      <td>e</td>
+    </tr>
+    <tr>
+      <td>0100110</td>
+      <td>38</td>
+      <td>26</td>
+      <td>&</td>
+      <td>1000111</td>
+      <td>70</td>
+      <td>46</td>
+      <td>F</td>
+      <td>1100111</td>
+      <td>102</td>
+      <td>66</td>
+      <td>f</td>
+    </tr>
+    <tr>
+      <td>0100111</td>
+      <td>39</td>
+      <td>27</td>
+      <td>'</td>
+      <td>1001000</td>
+      <td>71</td>
+      <td>47</td>
+      <td>G</td>
+      <td>1101000</td>
+      <td>103</td>
+      <td>67</td>
+      <td>g</td>
+    </tr>
+    <tr>
+      <td>0101000</td>
+      <td>40</td>
+      <td>28</td>
+      <td>(</td>
+      <td>1001001</td>
+      <td>72</td>
+      <td>48</td>
+      <td>H</td>
+      <td>1101001</td>
+      <td>104</td>
+      <td>68</td>
+      <td>h</td>
+    </tr>
+    <tr>
+      <td>0101001</td>
+      <td>41</td>
+      <td>29</td>
+      <td>)</td>
+      <td>1001010</td>
+      <td>73</td>
+      <td>49</td>
+      <td>I</td>
+      <td>1101010</td>
+      <td>105</td>
+      <td>69</td>
+      <td>i</td>
+    </tr>
+    <tr>
+      <td>0101010</td>
+      <td>42</td>
+      <td>2A</td>
+      <td>*</td>
+      <td>1001011</td>
+      <td>74</td>
+      <td>4A</td>
+      <td>J</td>
+      <td>1101011</td>
+      <td>106</td>
+      <td>6A</td>
+      <td>j</td>
+    </tr>
+    <tr>
+      <td>0101011</td>
+      <td>43</td>
+      <td>2B</td>
+      <td>+</td>
+      <td>1001100</td>
+      <td>75</td>
+      <td>4B</td>
+      <td>K</td>
+      <td>1101100</td>
+      <td>107</td>
+      <td>6B</td>
+      <td>k</td>
+    </tr>
+    <tr>
+      <td>0101100</td>
+      <td>44</td>
+      <td>2C</td>
+      <td>,</td>
+      <td>1001101</td>
+      <td>76</td>
+      <td>4C</td>
+      <td>L</td>
+      <td>1101101</td>
+      <td>108</td>
+      <td>6C</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <td>0101101</td>
+      <td>45</td>
+      <td>2D</td>
+      <td>-</td>
+      <td>1001110</td>
+      <td>77</td>
+      <td>4D</td>
+      <td>M</td>
+      <td>1101110</td>
+      <td>109</td>
+      <td>6D</td>
+      <td>m</td>
+    </tr>
+    <tr>
+      <td>0101110</td>
+      <td>46</td>
+      <td>2E</td>
+      <td>.</td>
+      <td>1001111</td>
+      <td>78</td>
+      <td>4E</td>
+      <td>N</td>
+      <td>1101111</td>
+      <td>110</td>
+      <td>6E</td>
+      <td>n</td>
+    </tr>
+    <tr>
+      <td>0101111</td>
+      <td>47</td>
+      <td>2F</td>
+      <td>/</td>
+      <td>1010000</td>
+      <td>79</td>
+      <td>4F</td>
+      <td>O</td>
+      <td>1110000</td>
+      <td>111</td>
+      <td>6F</td>
+      <td>o</td>
+    </tr>
+    <tr>
+      <td>0110000</td>
+      <td>48</td>
+      <td>30</td>
+      <td>0</td>
+      <td>1010001</td>
+      <td>80</td>
+      <td>50</td>
+      <td>P</td>
+      <td>1110001</td>
+      <td>112</td>
+      <td>70</td>
+      <td>p</td>
+    </tr>
+    <tr>
+      <td>0110001</td>
+      <td>49</td>
+      <td>31</td>
+      <td>1</td>
+      <td>1010010</td>
+      <td>81</td>
+      <td>51</td>
+      <td>Q</td>
+      <td>1110010</td>
+      <td>113</td>
+      <td>71</td>
+      <td>q</td>
+    </tr>
+    <tr>
+      <td>0110010</td>
+      <td>50</td>
+      <td>32</td>
+      <td>2</td>
+      <td>1010011</td>
+      <td>82</td>
+      <td>52</td>
+      <td>R</td>
+      <td>1110011</td>
+      <td>114</td>
+      <td>72</td>
+      <td>r</td>
+    </tr>
+    <tr>
+      <td>0110011</td>
+      <td>51</td>
+      <td>33</td>
+      <td>3</td>
+      <td>1010100</td>
+      <td>83</td>
+      <td>53</td>
+      <td>S</td>
+      <td>1110100</td>
+      <td>115</td>
+      <td>73</td>
+      <td>s</td>
+    </tr>
+    <tr>
+      <td>0110100</td>
+      <td>52</td>
+      <td>34</td>
+      <td>4</td>
+      <td>1010101</td>
+      <td>84</td>
+      <td>54</td>
+      <td>T</td>
+      <td>1110101</td>
+      <td>116</td>
+      <td>74</td>
+      <td>t</td>
+    </tr>
+    <tr>
+      <td>0110101</td>
+      <td>53</td>
+      <td>35</td>
+      <td>5</td>
+      <td>1010110</td>
+      <td>85</td>
+      <td>55</td>
+      <td>U</td>
+      <td>1110110</td>
+      <td>117</td>
+      <td>75</td>
+      <td>u</td>
+    </tr>
+    <tr>
+      <td>0110110</td>
+      <td>54</td>
+      <td>36</td>
+      <td>6</td>
+      <td>1010111</td>
+      <td>86</td>
+      <td>56</td>
+      <td>V</td>
+      <td>1110111</td>
+      <td>118</td>
+      <td>76</td>
+      <td>v</td>
+    </tr>
+    <tr>
+      <td>0110111</td>
+      <td>55</td>
+      <td>37</td>
+      <td>7</td>
+      <td>1011000</td>
+      <td>87</td>
+      <td>57</td>
+      <td>W</td>
+      <td>1111000</td>
+      <td>119</td>
+      <td>77</td>
+      <td>w</td>
+    </tr>
+    <tr>
+      <td>0111000</td>
+      <td>56</td>
+      <td>38</td>
+      <td>8</td>
+      <td>1011001</td>
+      <td>88</td>
+      <td>58</td>
+      <td>X</td>
+      <td>1111001</td>
+      <td>120</td>
+      <td>78</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <td>0111001</td>
+      <td>57</td>
+      <td>39</td>
+      <td>9</td>
+      <td>1011010</td>
+      <td>89</td>
+      <td>59</td>
+      <td>Y</td>
+      <td>1111010</td>
+      <td>121</td>
+      <td>79</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <td>0111010</td>
+      <td>58</td>
+      <td>3A</td>
+      <td>:</td>
+      <td>1011011</td>
+      <td>90</td>
+      <td>5A</td>
+      <td>Z</td>
+      <td>1111011</td>
+      <td>122</td>
+      <td>7A</td>
+      <td>z</td>
+    </tr>
+    <tr>
+      <td>0111100</td>
+      <td>59</td>
+      <td>3B</td>
+      <td>;</td>
+      <td>1011100</td>
+      <td>91</td>
+      <td>5B</td>
+      <td>[</td>
+      <td>1111100</td>
+      <td>123</td>
+      <td>7B</td>
+      <td>{</td>
+    </tr>
+    <tr>
+      <td>0111101</td>
+      <td>60</td>
+      <td>3C</td>
+      <td><</td>
+      <td>1011101</td>
+      <td>92</td>
+      <td>5C</td>
+      <td>\</td>
+      <td>1111101</td>
+      <td>124</td>
+      <td>7C</td>
+      <td>|</td>
+    </tr>
+    <tr>
+      <td>0111110</td>
+      <td>61</td>
+      <td>3D</td>
+      <td>=</td>
+      <td>1011110</td>
+      <td>93</td>
+      <td>5D</td>
+      <td>]</td>
+      <td>1111110</td>
+      <td>125</td>
+      <td>7D</td>
+      <td>}</td>
+    </tr>
+    <tr>
+      <td>0111111</td>
+      <td>62</td>
+      <td>3E</td>
+      <td>></td>
+      <td>1011111</td>
+      <td>94</td>
+      <td>5E</td>
+      <td>^</td>
+      <td>1111111</td>
+      <td>126</td>
+      <td>7E</td>
+      <td>~</td>
+    </tr>
+    <tr>
+      <td>1000000</td>
+      <td>63</td>
+      <td>3F</td>
+      <td>?</td>
+      <td>1100000</td>
+      <td>95</td>
+      <td>5F</td>
+      <td>_</td>
+      <td>1111111</td>
+      <td>127</td>
+      <td>7F</td>
+      <td>DEL</td>
+    </tr>
+</table>       
+  </div>
+</div>
+<hr>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>8 bit ASCII</h3>
+<p>8-bit ASCII, also known as Extended ASCII, builds upon the original American Standard Code for Information Interchange (ASCII) system. To enhance its foundational capabilities, 8-bit ASCII includes 8 binary digits (or bits) for each character.</p>
+<p>ASCII represents characters using 7 bits (128 code points). However, 8-bit ASCII extends this to 256 characters by utilizing 8 bits per character.<br>The additional bit allows for a broader range of characters, including special symbols, accented letters, and other language-specific characters.</p>
+<p><mark>In summary, 8-bit ASCII enhances the original character encoding by allowing more characters and symbols, making it versatile for different contexts.</mark></p>
+</div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <p>Image of something...</p>
+   
+  </div>
+</div>
+<div class = "row">
+  <div class = "content" style = "padding: 10px 10px 10px 0px;">
+<h3>Unicode</h3>
+<p>Unicode, formally known as The Unicode Standard, is a text encoding standard maintained by the Unicode Consortium. Its purpose is to support the use of text written in all of the world's major writing systems.</p>
+<p>Unicode assigns a unique number to every character, regardless of the platform, program, or language. Before Unicode, various character encodings existed, each with limitations. These early encodings couldn't cover all languages and often conflicted with one another. Unicode changed this by providing a consistent way to represent characters across different systems.</p>
+<p>Unicode uses 16 bits to represent characters.</p>
+  </div>
+  <div class = "content" style = "padding: 10px 0px 10px 10px;">
+    <p>Here are examples characters in the Unicode Character Set:</p>
+    <ul>
+    <li>&#12371;&#12435;&#12395;&#12385;&#12399; (Japanese)</li>
+    <li>&#21414;&#28771; (Chinese)</li>
+    <li>&#54620;&#44397; (Korean)</li>
+    <li>&#263;&#333;&#269;&#299;&#363;&#299;&#363; (Hawaiian)</li>
+    <li>&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577; (Arabic)</li>
+    <li>&#72;&#101;&#108;&#108;&#111;&#32;&#87;&#111;&#114;&#108;&#100; (English)</li>
+    <li>&#1587;&#1604;&#1575;&#1605; &#1575;&#1604;&#1604;&#1610;&#1603;&#1605; (Urdu)</li>
+    <li>&#2476;&#2494;&#2439;&#2482;&#2494;&#2480; &#2476;&#2494;&#2482;&#2494;&#2480; (Bengali)</li>
+    <li>&#2361;&#2350;&#2366;&#2340; &#2357;&#2366;&#2352;&#2368;&#2344;&#2381;&#2352; (Hindi)</li>
+    <li>&#915;&#949;&#953;&#945; &#963;&#959;&#965; (Greek)</li>
+  </ul>
+    </div>
+</div>
+
+<div class="footer">
+<p> mrahmedcomputing </p>
+</div>
+</div>
+<div class="rightside">
+3
+</div>
+</div>
+</body>
+</html>
